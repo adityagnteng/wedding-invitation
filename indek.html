@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation - Aditya & Tabitha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --beige: #f5e9dc;
+      --pink: #f9dce0;
+      --gray-blue: #cfd8dc;
+      --dark: #444;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      background: linear-gradient(to bottom, var(--beige), var(--pink), var(--gray-blue));
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      background: url('images/cover1.png') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      backdrop-filter: brightness(0.6);
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      z-index: 2;
+      margin-bottom: 0.3em;
+    }
+
+    header p {
+      z-index: 2;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .profile img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+    }
+
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8em;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .story img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 20px;
+      margin: 30px auto;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .quote {
+      font-style: italic;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 30px;
+      border-radius: 20px;
+      margin: 40px auto;
+      max-width: 700px;
+    }
+
+    .gallery {
+      display: flex;
+      overflow-x: scroll;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 80%;
+      max-width: 400px;
+      border-radius: 20px;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .rsvp {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 40px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    .rsvp input, .rsvp textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .rsvp button {
+      background: var(--pink);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .rsvp button:hover {
+      background: var(--gray-blue);
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8em;
+      background: rgba(255,255,255,0.6);
+    }
+
+    /* Floating music button */
+    #music-control {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--pink);
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    #music-control:hover {
+      background: var(--gray-blue);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Aditya & Tabitha</h1>
+    <p>Wedding Invitation | February 5, 2033</p>
+  </header>
+
+  <section class="profile">
+    <h2>Groom and Bride Profile</h2>
+    <div>
+      <img src="images/groom.png" alt="Groom">
+      <img src="images/bride.png" alt="Bride">
+    </div>
+    <p><strong>Groom:</strong> Ignatius Aditya Bagas Setiyadi<br>Son of Yohanes Prasetyo Adhi Nugroho & Sri Winarni</p>
+    <p><strong>Bride:</strong> Angela Tabitha El Sharon<br>Daughter of Galih Purba Aditya & Josephine Atika Natalia</p>
+  </section>
+
+  <section class="story">
+    <h2>Our Story – First Time We Meet</h2>
+    <p>We first met in 2022 during junior high school. At that time, we were merely classmates with limited communication due to COVID-19. But after the New Normal period was implemented, we were able to meet in person, and we slowly started to build a good relationship.</p>
+    <img src="images/story.png" alt="Story Photo">
+  </section>
+
+  <section class="gallery-section">
+    <h2>Our Gallery</h2>
+    <div class="gallery">
+      <img src="images/gallery1.png" alt="">
+      <img src="images/gallery2.png" alt="">
+      <img src="images/gallery3.png" alt="">
+      <img src="images/gallery4.png" alt="">
+      <img src="images/gallery5.png" alt="">
+      <img src="images/gallery6.png" alt="">
+    </div>
+  </section>
+
+  <section class="quote">
+    <p>“But at the beginning of creation God ‘made them male and female. For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh. So they are no longer two, but one flesh. Therefore what God has joined together, let no one separate.”</p>
+    <p><em>– Mark 10:6–9</em></p>
+  </section>
+
+  <section class="details">
+    <h2>Wedding Details</h2>
+    <p><strong>Date:</strong> 5 February 2033</p>
+    <p><strong>Venue:</strong> Gereja Katolik Paroki Santo Antonius Padua<br>
+      Jl. Abu Bakar Ali No.1, Kotabaru, Gondokusuman, Yogyakarta</p>
+    <iframe src="https://maps.google.com/maps?q=Gereja%20Katolik%20Paroki%20Santo%20Antonius%20Padua&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <section>
+    <h2>Guest Book & RSVP</h2>
+    <div class="rsvp">
+      <input id="guestName" type="text" placeholder="Your Name">
+      <textarea id="guestMessage" rows="3" placeholder="Your Message"></textarea>
+      <button onclick="sendRSVP()">Send via WhatsApp</button>
+    </div>
+  </section>
+
+  <footer>
+    With love and gratitude,<br>
+    Aditya & Tabitha
+  </footer>
+
+  <button id="music-control">🎵</button>
+
+  <audio id="bg-music" src="music/piano.mp3" autoplay loop></audio>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-control');
+    let playing = true;
+
+    btn.onclick = () => {
+      if (playing) {
+        music.pause();
+        btn.textContent = '🔇';
+      } else {
+        music.play();
+        btn.textContent = '🎵';
+      }
+      playing = !playing;
+    }
+
+    function sendRSVP() {
+      const name = document.getElementById('guestName').value;
+      const message = document.getElementById('guestMessage').value;
+      const wa = 'https://wa.me/6287807044090?text=' +
+        encodeURIComponent(`Hello, this is ${name}.\n\n${message}\n\nRSVP for Aditya & Tabitha's Wedding ❤️`);
+      window.open(wa, '_blank');
+    }
+  </script>
+
+</body>
+</html>
